@@ -9,9 +9,8 @@ def read_csv(csv_file_path):
         data = f.readlines() # Extract Readlines object
         for line in data: # Iterate through each line, splitting entries by ','
             line = line.strip().replace('"', '').split(',')
-            converted_line = []
-
             #Convert entries to ints, floats, or strings
+            converted_line = []
             for el in line:
                 if el.isdecimal():
                     converted_line.append(int(el))
